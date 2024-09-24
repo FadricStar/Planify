@@ -261,10 +261,20 @@
 				{
 					"name": "BuscarPorNombreUsuario",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzE1MDMwMiwiZXhwIjoxNzI3MTg2MzAyfQ.MqFWB7557i_eRNkrKej8PEbqqxkss309gYaagP2QZ2at_shjBeJnJqiwpCbNf8M_Z-68M6a1YeNOTeQWMfyorQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/planify/usuario/Carlos Fernández",
+							"raw": "http://localhost:8080/planify/buscarusuarioporusername/MariaL",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -272,8 +282,8 @@
 							"port": "8080",
 							"path": [
 								"planify",
-								"usuario",
-								"Carlos Fernández"
+								"buscarusuarioporusername",
+								"MariaL"
 							]
 						}
 					},
@@ -458,7 +468,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzE1MTAxOCwiZXhwIjoxNzI3MTg3MDE4fQ.tI2-gfj5RelNs43s2q6PYvwcmEz4xNJSlIe6cyROsOVjb9tSL227v4vsqn1_CbKZyZQatC3UBQoDMpgaSElh_g",
 									"type": "string"
 								}
 							]
@@ -467,7 +477,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id_proveedor\": 0,\r\n  \"nombreProveedor\": \"Pedro Pascal\",\r\n  \"correoProveedor\": \"pedro@gmail.com\",\r\n  \"telefonoProveedor\": \"989898767\",\r\n  \"productos\": [\r\n    {\r\n      \"id_producto\": 2,\r\n      \"nombreProducto\": \"Producto de ejemplo\",\r\n      \"descripcion\": \"Descripción del producto\",\r\n      \"precioProducto\": 100,\r\n      \"categoria\": \"Categoría de ejemplo\",\r\n      \"carritoCompra\": {\r\n        \"id_carrito\": 1,\r\n        \"evento\": {\r\n          \"id_evento\": 1,\r\n          \"nombreEvento\": \"Evento de ejemplo\",\r\n          \"tipoEvento\": \"Tipo de evento\",\r\n          \"fechaEvento\": \"2024-09-20\",\r\n          \"precioEvento\": 500,\r\n          \"cantInvitados\": 100,\r\n          \"usuario\": {\r\n            \"id_usuario\": 2,\r\n            \"nombre\": \"Nombre de usuario\",\r\n            \"correo\": \"usuario@ejemplo.com\",\r\n            \"contrasena\": \"contrasena123\",\r\n            \"fechaNacimiento\": \"1990-01-01\",\r\n            \"membresia\": {\r\n              \"id_membresia\": 1,\r\n              \"tipo\": \"Tipo de membresía\",\r\n              \"fechaInicio\": \"2024-01-01\",\r\n              \"fechaExpiracion\": \"2025-01-01\"\r\n            },\r\n            \"rol\": {\r\n              \"id_rol\": 2,\r\n              \"tipo\": \"Rol de ejemplo\"\r\n            }\r\n          },\r\n          \"carritoCompra\": {\r\n            \"id_carrito\": 1\r\n          }\r\n        },\r\n        \"pago\": {\r\n          \"id_pago\": 1,\r\n          \"metodoPago\": \"Tarjeta de crédito\",\r\n          \"cantPago\": 500,\r\n          \"fechaPago\": \"2024-09-20\",\r\n          \"carritoCompra\": {\r\n            \"id_carrito\": 1\r\n          }\r\n        },\r\n        \"items\": [\r\n          {\r\n            \"id_item\": 1,\r\n            \"nombreItem\": \"Item 1\",\r\n            \"cantidad\": 2,\r\n            \"precio\": 50\r\n          }\r\n        ]\r\n      },\r\n      \"proveedor\": {\r\n        \"id_proveedor\": 2,\r\n        \"nombreProveedor\": \"Proveedor de ejemplo\",\r\n        \"correoProveedor\": \"proveedor@ejemplo.com\",\r\n        \"telefonoProveedor\": \"987654321\",\r\n        \"productos\": []\r\n      }\r\n    }\r\n  ]\r\n}\r\n",
+							"raw": "{\r\n  \"id_proveedor\": 0,\r\n  \"nombreProveedor\": \"Pedro Pascal\",\r\n  \"correoProveedor\": \"pedro@gmail.com\",\r\n  \"telefonoProveedor\": \"989898767\"\r\n \r\n  \r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -602,7 +612,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzE1MTAxOCwiZXhwIjoxNzI3MTg3MDE4fQ.tI2-gfj5RelNs43s2q6PYvwcmEz4xNJSlIe6cyROsOVjb9tSL227v4vsqn1_CbKZyZQatC3UBQoDMpgaSElh_g",
 									"type": "string"
 								}
 							]
@@ -611,7 +621,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id_producto\": 0,\r\n  \"nombreProducto\": \"string\",\r\n  \"descripcion\": \"string\",\r\n  \"precioProducto\": 0,\r\n  \"categoria\": \"string\",\r\n  \"carritoCompra\": {\r\n    \"id_carrito\": 0,\r\n    \"evento\": {\r\n      \"id_evento\": 0,\r\n      \"nombreEvento\": \"string\",\r\n      \"tipoEvento\": \"string\",\r\n      \"fechaEvento\": \"2024-09-20\",\r\n      \"precioEvento\": 0,\r\n      \"cantInvitados\": 0,\r\n      \"usuario\": {\r\n        \"id_usuario\": 0,\r\n        \"nombre\": \"string\",\r\n        \"correo\": \"string\",\r\n        \"contrasena\": \"string\",\r\n        \"fechaNacimiento\": \"2024-09-20\",\r\n        \"membresia\": {\r\n          \"id_membresia\": 0,\r\n          \"tipo\": \"string\",\r\n          \"fechaInicio\": \"2024-09-20\",\r\n          \"fechaExpiracion\": \"2024-09-20\"\r\n        },\r\n        \"rol\": {\r\n          \"id_rol\": 0,\r\n          \"tipo\": \"string\"\r\n        }\r\n      },\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"pago\": {\r\n      \"id_pago\": 0,\r\n      \"metodoPago\": \"string\",\r\n      \"cantPago\": 0,\r\n      \"fechaPago\": \"2024-09-20\",\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"items\": [\r\n      \"string\"\r\n    ]\r\n  },\r\n  \"proveedor\": {\r\n    \"id_proveedor\": 0,\r\n    \"nombreProveedor\": \"string\",\r\n    \"correoProveedor\": \"string\",\r\n    \"telefonoProveedor\": \"string\",\r\n    \"productos\": [\r\n      \"string\"\r\n    ]\r\n  }\r\n}",
+							"raw": "{\r\n  \"id_producto\": 0,\r\n  \"nombreProducto\": \"papa\",\r\n  \"descripcion\": \"comida\",\r\n  \"precioProducto\": 3,\r\n  \"categoria\": \"papa\",\r\n  \"proveedor\":\r\n  {\r\n    \"id_proveedor\":1\r\n  }\r\n  \r\n  \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -901,7 +911,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzE1MTAxOCwiZXhwIjoxNzI3MTg3MDE4fQ.tI2-gfj5RelNs43s2q6PYvwcmEz4xNJSlIe6cyROsOVjb9tSL227v4vsqn1_CbKZyZQatC3UBQoDMpgaSElh_g",
 									"type": "string"
 								}
 							]
@@ -910,7 +920,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id_pago\": 0,\r\n  \"metodoPago\": \"string\",\r\n  \"cantPago\": 0,\r\n  \"fechaPago\": \"2024-09-20\",\r\n  \"carritoCompra\": {\r\n    \"id_carrito\": 0,\r\n    \"evento\": {\r\n      \"id_evento\": 0,\r\n      \"nombreEvento\": \"string\",\r\n      \"tipoEvento\": \"string\",\r\n      \"fechaEvento\": \"2024-09-20\",\r\n      \"precioEvento\": 0,\r\n      \"cantInvitados\": 0,\r\n      \"usuario\": {\r\n        \"id_usuario\": 0,\r\n        \"nombre\": \"string\",\r\n        \"correo\": \"string\",\r\n        \"contrasena\": \"string\",\r\n        \"fechaNacimiento\": \"2024-09-20\",\r\n        \"membresia\": {\r\n          \"id_membresia\": 0,\r\n          \"tipo\": \"string\",\r\n          \"fechaInicio\": \"2024-09-20\",\r\n          \"fechaExpiracion\": \"2024-09-20\"\r\n        },\r\n        \"rol\": {\r\n          \"id_rol\": 0,\r\n          \"tipo\": \"string\"\r\n        }\r\n      },\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"pago\": {\r\n      \"id_pago\": 0,\r\n      \"metodoPago\": \"string\",\r\n      \"cantPago\": 0,\r\n      \"fechaPago\": \"2024-09-20\",\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"items\": [\r\n      \"string\"\r\n    ]\r\n  }\r\n}",
+							"raw": "{\r\n  \r\n  \"metodoPago\": \"Tarjeta de Crédito\",\r\n  \"cantPago\": 100.0,\r\n  \"fechaPago\": \"2024-09-20\"\r\n  \r\n\r\n  \r\n\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1211,7 +1221,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c3VhcmlvMSIsImlhdCI6MTcyNzA3NTM0MSwiZXhwIjoxNzI3MTExMzQxfQ.6pWjWYTxIkQ1zEenYywxFXZiL5a528Y4ge2qK4xDMvXPBSf2bakFgX2eXvD6lc6nyCFMpamkzJ35kcwbT-65mQ",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzE0NDIzMiwiZXhwIjoxNzI3MTgwMjMyfQ.JDsCQisZ5HYNag_dfjho2VmonJPYrtPiFMJy6UHmYyPvkVZl8hI1G3nUO34Z8AT9UjEnYFV_YJW5Qtfn9w3GSw",
 									"type": "string"
 								}
 							]
@@ -1220,7 +1230,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id_evento\": 0,\r\n  \"nombreEvento\": \"string\",\r\n  \"tipoEvento\": \"string\",\r\n  \"fechaEvento\": \"2024-09-20\",\r\n  \"precioEvento\": 0,\r\n  \"cantInvitados\": 0,\r\n  \"usuario\": {\r\n    \"id_usuario\": 0,\r\n    \"nombre\": \"string\",\r\n    \"correo\": \"string\",\r\n    \"contrasena\": \"string\",\r\n    \"fechaNacimiento\": \"2024-09-20\",\r\n    \"membresia\": {\r\n      \"id_membresia\": 0,\r\n      \"tipo\": \"string\",\r\n      \"fechaInicio\": \"2024-09-20\",\r\n      \"fechaExpiracion\": \"2024-09-20\"\r\n    },\r\n    \"rol\": {\r\n      \"id_rol\": 0,\r\n      \"tipo\": \"string\"\r\n    }\r\n  },\r\n  \"carritoCompra\": {\r\n    \"id_carrito\": 0,\r\n    \"evento\": {\r\n      \"id_evento\": 0,\r\n      \"nombreEvento\": \"string\",\r\n      \"tipoEvento\": \"string\",\r\n      \"fechaEvento\": \"2024-09-20\",\r\n      \"precioEvento\": 0,\r\n      \"cantInvitados\": 0,\r\n      \"usuario\": {\r\n        \"id_usuario\": 0,\r\n        \"nombre\": \"string\",\r\n        \"correo\": \"string\",\r\n        \"contrasena\": \"string\",\r\n        \"fechaNacimiento\": \"2024-09-20\",\r\n        \"membresia\": {\r\n          \"id_membresia\": 0,\r\n          \"tipo\": \"string\",\r\n          \"fechaInicio\": \"2024-09-20\",\r\n          \"fechaExpiracion\": \"2024-09-20\"\r\n        },\r\n        \"rol\": {\r\n          \"id_rol\": 0,\r\n          \"tipo\": \"string\"\r\n        }\r\n      },\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"pago\": {\r\n      \"id_pago\": 0,\r\n      \"metodoPago\": \"string\",\r\n      \"cantPago\": 0,\r\n      \"fechaPago\": \"2024-09-20\",\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"items\": [\r\n      \"string\"\r\n    ]\r\n  }\r\n}",
+							"raw": "{\r\n  \r\n  \"nombreEvento\": \"Feria de Tecnología\",\r\n  \"tipoEvento\": \"Exposición\",\r\n  \"fechaEvento\": \"2024-09-30\",\r\n  \"precioEvento\": 200.0,\r\n  \"cantInvitados\": 300,\r\n  \"usuario\": {\r\n    \"id_usuario\": 1\r\n  }\r\n  \r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1554,45 +1564,6 @@
 								"planify",
 								"carritoCompra",
 								"Ordenado"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "RegistrarCarritoCompra",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzEzNzM4MSwiZXhwIjoxNzI3MTczMzgxfQ.ODOZC8_dwSSV2HvU2ERjPULn-gn5ruT0RU0SVJnLSxvgLSmbidStzI2hmUBaPwwHx6pq82ArFBuqUehY0jIePQ",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \r\n                \"id_evento\": 2\r\n                \r\n\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/planify/saveCarrito",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"planify",
-								"saveCarrito"
 							]
 						}
 					},
