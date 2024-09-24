@@ -1,0 +1,1575 @@
+{
+	"info": {
+		"_postman_id": "7ecb0749-93d0-4611-bcfe-7cf27817c2c7",
+		"name": "Planify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37849357"
+	},
+	"item": [
+		{
+			"name": "PoderAdmin",
+			"item": [
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"admin\",\r\n  \"contrasena\":\"paloma\"\r\n  \r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c3VhcmlvMSIsImlhdCI6MTcyNzEzMzUyNCwiZXhwIjoxNzI3MTY5NTI0fQ.i0G2aWwspM6jqaEqb8fLLJ1Rspc5eB0ojvrvJCS45bXxxvKPayt86Sbin7Xza1VrivpMxZkCiUTps2oTiChr5w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/planify/verificarAdmin",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"verificarAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c3VhcmlvMSIsImlhdCI6MTcyNzEzMzk5OCwiZXhwIjoxNzI3MTY5OTk4fQ.kAkg7ihaZ5Pm1eccnUCgg-Ck_qyzLFMxe34P2_POL23EXraVPeC9FEfOhFQ5RRPGXkburydDsXmzKJ3x5k0inQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/planify/verificarUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"verificarUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzEzMzA3MywiZXhwIjoxNzI3MTY5MDczfQ.XT0HhGUxhBRmhUp91QEUEPawNRVcwV5XqXs2dfM7Ofe2PPFt7if6CPeOP6MAgwKb2JnllaOZAR4-kY2J-igBlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"PdieroFull\",\r\n    \"contrasena\":\"gojo\",\r\n    \"correo\": \"palermo@gmail.com\",\r\n    \"fechaNacimiento\": \"2025-01-01\",\r\n   \"membresia\": {\r\n    \"id_membresia\": 2\r\n    \r\n  }\r\n\r\n   \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/planify/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarRolUsuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzEzMzA3MywiZXhwIjoxNzI3MTY5MDczfQ.XT0HhGUxhBRmhUp91QEUEPawNRVcwV5XqXs2dfM7Ofe2PPFt7if6CPeOP6MAgwKb2JnllaOZAR4-kY2J-igBlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/planify/save/10/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"save",
+								"10",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "ListaUsuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzEzMzA3MywiZXhwIjoxNzI3MTY5MDczfQ.XT0HhGUxhBRmhUp91QEUEPawNRVcwV5XqXs2dfM7Ofe2PPFt7if6CPeOP6MAgwKb2JnllaOZAR4-kY2J-igBlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_usuario\": 0,\r\n  \"nombre\": \"string\",\r\n  \"correo\": \"string\",\r\n  \"contrasena\": \"string\",\r\n  \"fechaNacimiento\": \"2024-09-20\",\r\n  \"membresia\": {\r\n    \"id_membresia\": 0,\r\n    \"tipo\": \"string\",\r\n    \"fechaInicio\": \"2024-09-20\",\r\n    \"fechaExpiracion\": \"2024-09-20\"\r\n  },\r\n  \"rol\": {\r\n    \"id_rol\": 0,\r\n    \"tipo\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/usuario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorNombreUsuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzE1MDMwMiwiZXhwIjoxNzI3MTg2MzAyfQ.MqFWB7557i_eRNkrKej8PEbqqxkss309gYaagP2QZ2at_shjBeJnJqiwpCbNf8M_Z-68M6a1YeNOTeQWMfyorQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/buscarusuarioporusername/MariaL",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"buscarusuarioporusername",
+								"MariaL"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorNombreDeProveedor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/usuario/admnistrador/ElectroShop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"usuario",
+								"admnistrador",
+								"ElectroShop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rol",
+			"item": [
+				{
+					"name": "RegistrarRol",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_rol\": 0,\r\n  \"tipo\": \"pete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/rol",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"rol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarRol",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarRol",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_rol\": 0,\r\n  \"tipo\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/rol",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"rol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarRol",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/rol/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"rol",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proveedor",
+			"item": [
+				{
+					"name": "RegistrarProveedor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzE1MTAxOCwiZXhwIjoxNzI3MTg3MDE4fQ.tI2-gfj5RelNs43s2q6PYvwcmEz4xNJSlIe6cyROsOVjb9tSL227v4vsqn1_CbKZyZQatC3UBQoDMpgaSElh_g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_proveedor\": 0,\r\n  \"nombreProveedor\": \"Pedro Pascal\",\r\n  \"correoProveedor\": \"pedro@gmail.com\",\r\n  \"telefonoProveedor\": \"989898767\"\r\n \r\n  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/proveedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarProveedor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/proveedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarProveedor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_proveedor\": 0,\r\n  \"nombreProveedor\": \"string\",\r\n  \"correoProveedor\": \"string\",\r\n  \"telefonoProveedor\": \"string\",\r\n  \"productos\": [\r\n    {\r\n      \"id_producto\": 0,\r\n      \"nombreProducto\": \"string\",\r\n      \"descripcion\": \"string\",\r\n      \"precioProducto\": 0,\r\n      \"categoria\": \"string\",\r\n      \"carritoCompra\": {\r\n        \"id_carrito\": 0,\r\n        \"evento\": {\r\n          \"id_evento\": 0,\r\n          \"nombreEvento\": \"string\",\r\n          \"tipoEvento\": \"string\",\r\n          \"fechaEvento\": \"2024-09-20\",\r\n          \"precioEvento\": 0,\r\n          \"cantInvitados\": 0,\r\n          \"usuario\": {\r\n            \"id_usuario\": 0,\r\n            \"nombre\": \"string\",\r\n            \"correo\": \"string\",\r\n            \"contrasena\": \"string\",\r\n            \"fechaNacimiento\": \"2024-09-20\",\r\n            \"membresia\": {\r\n              \"id_membresia\": 0,\r\n              \"tipo\": \"string\",\r\n              \"fechaInicio\": \"2024-09-20\",\r\n              \"fechaExpiracion\": \"2024-09-20\"\r\n            },\r\n            \"rol\": {\r\n              \"id_rol\": 0,\r\n              \"tipo\": \"string\"\r\n            }\r\n          },\r\n          \"carritoCompra\": \"string\"\r\n        },\r\n        \"pago\": {\r\n          \"id_pago\": 0,\r\n          \"metodoPago\": \"string\",\r\n          \"cantPago\": 0,\r\n          \"fechaPago\": \"2024-09-20\",\r\n          \"carritoCompra\": \"string\"\r\n        },\r\n        \"items\": [\r\n          \"string\"\r\n        ]\r\n      },\r\n      \"proveedor\": {\r\n        \"id_proveedor\": 0,\r\n        \"nombreProveedor\": \"string\",\r\n        \"correoProveedor\": \"string\",\r\n        \"telefonoProveedor\": \"string\",\r\n        \"productos\": [\r\n          \"string\"\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/proveedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarProveedor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/proveedor/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"proveedor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "RegistrarProducto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzE1MTAxOCwiZXhwIjoxNzI3MTg3MDE4fQ.tI2-gfj5RelNs43s2q6PYvwcmEz4xNJSlIe6cyROsOVjb9tSL227v4vsqn1_CbKZyZQatC3UBQoDMpgaSElh_g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_producto\": 0,\r\n  \"nombreProducto\": \"papa\",\r\n  \"descripcion\": \"comida\",\r\n  \"precioProducto\": 3,\r\n  \"categoria\": \"papa\",\r\n  \"proveedor\":\r\n  {\r\n    \"id_proveedor\":1\r\n  }\r\n  \r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarProducto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarProducto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_producto\": 0,\r\n  \"nombreProducto\": \"string\",\r\n  \"descripcion\": \"string\",\r\n  \"precioProducto\": 0,\r\n  \"categoria\": \"string\",\r\n  \"carritoCompra\": {\r\n    \"id_carrito\": 0,\r\n    \"evento\": {\r\n      \"id_evento\": 0,\r\n      \"nombreEvento\": \"string\",\r\n      \"tipoEvento\": \"string\",\r\n      \"fechaEvento\": \"2024-09-20\",\r\n      \"precioEvento\": 0,\r\n      \"cantInvitados\": 0,\r\n      \"usuario\": {\r\n        \"id_usuario\": 0,\r\n        \"nombre\": \"string\",\r\n        \"correo\": \"string\",\r\n        \"contrasena\": \"string\",\r\n        \"fechaNacimiento\": \"2024-09-20\",\r\n        \"membresia\": {\r\n          \"id_membresia\": 0,\r\n          \"tipo\": \"string\",\r\n          \"fechaInicio\": \"2024-09-20\",\r\n          \"fechaExpiracion\": \"2024-09-20\"\r\n        },\r\n        \"rol\": {\r\n          \"id_rol\": 0,\r\n          \"tipo\": \"string\"\r\n        }\r\n      },\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"pago\": {\r\n      \"id_pago\": 0,\r\n      \"metodoPago\": \"string\",\r\n      \"cantPago\": 0,\r\n      \"fechaPago\": \"2024-09-20\",\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"items\": [\r\n      \"string\"\r\n    ]\r\n  },\r\n  \"proveedor\": {\r\n    \"id_proveedor\": 0,\r\n    \"nombreProveedor\": \"string\",\r\n    \"correoProveedor\": \"string\",\r\n    \"telefonoProveedor\": \"string\",\r\n    \"productos\": [\r\n      \"string\"\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarProducto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA3NTM5NSwiZXhwIjoxNzI3MTExMzk1fQ.aFOpAO5lJ_GtKGpqDqRZH-IuEc-AbwosoJ9I2iYRdXsW_iRslsEV2O2fUJQWkN-sfIN6DSwBYTt948fEJBR6Cw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/producto/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"producto",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorNombreProducto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/producto/Kit de Jardinería",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"producto",
+								"Kit de Jardinería"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarProductoPorCategoria",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/producto/buscarCategoria/Muebles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"producto",
+								"buscarCategoria",
+								"Muebles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TotalVentasPorNombreProveedor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/VentaTotalProveedor/ElectroShop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"VentaTotalProveedor",
+								"ElectroShop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MontoTotalDeVentasPorCategoriaDeProducto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/TotalVentasCategoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"TotalVentasCategoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CostoTotalDeProductosPorUsuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/DineroTotalUsuario/CarlosP",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"DineroTotalUsuario",
+								"CarlosP"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pago",
+			"item": [
+				{
+					"name": "RegistrarPago",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzE1MTAxOCwiZXhwIjoxNzI3MTg3MDE4fQ.tI2-gfj5RelNs43s2q6PYvwcmEz4xNJSlIe6cyROsOVjb9tSL227v4vsqn1_CbKZyZQatC3UBQoDMpgaSElh_g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"metodoPago\": \"Tarjeta de Crédito\",\r\n  \"cantPago\": 100.0,\r\n  \"fechaPago\": \"2024-09-20\"\r\n  \r\n\r\n  \r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/pago",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"pago"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPagos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/pagos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"pagos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPago",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_pago\": 0,\r\n  \"metodoPago\": \"string\",\r\n  \"cantPago\": 0,\r\n  \"fechaPago\": \"2024-09-20\",\r\n  \"carritoCompra\": {\r\n    \"id_carrito\": 0,\r\n    \"evento\": {\r\n      \"id_evento\": 0,\r\n      \"nombreEvento\": \"string\",\r\n      \"tipoEvento\": \"string\",\r\n      \"fechaEvento\": \"2024-09-20\",\r\n      \"precioEvento\": 0,\r\n      \"cantInvitados\": 0,\r\n      \"usuario\": {\r\n        \"id_usuario\": 0,\r\n        \"nombre\": \"string\",\r\n        \"correo\": \"string\",\r\n        \"contrasena\": \"string\",\r\n        \"fechaNacimiento\": \"2024-09-20\",\r\n        \"membresia\": {\r\n          \"id_membresia\": 0,\r\n          \"tipo\": \"string\",\r\n          \"fechaInicio\": \"2024-09-20\",\r\n          \"fechaExpiracion\": \"2024-09-20\"\r\n        },\r\n        \"rol\": {\r\n          \"id_rol\": 0,\r\n          \"tipo\": \"string\"\r\n        }\r\n      },\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"pago\": {\r\n      \"id_pago\": 0,\r\n      \"metodoPago\": \"string\",\r\n      \"cantPago\": 0,\r\n      \"fechaPago\": \"2024-09-20\",\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"items\": [\r\n      \"string\"\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/pago",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"pago"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPago",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/pago/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"pago",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VentasPorMetodoDePago",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/ventassegunmetodo/Efectivo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"ventassegunmetodo",
+								"Efectivo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarCostoPorUsuarioID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/pagosdeusuario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"pagosdeusuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Membresia",
+			"item": [
+				{
+					"name": "RegistrarMembresia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_membresia\": 0,\r\n  \"tipo\": \"string\",\r\n  \"fechaInicio\": \"2024-09-20\",\r\n  \"fechaExpiracion\": \"2024-09-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/membresia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"membresia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarMembresia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA2OTk5NywiZXhwIjoxNzI3MTA1OTk3fQ.TYcQw6Xz8R--s4-w_CfYKFeXGWl5z0J7HSe_eGSfWhaLunmODS5J-1Llmd7X7G072VGpWk1KgRoqBZTi-KSn6w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/membresias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"membresias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarMembresia",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_membresia\": 0,\r\n  \"tipo\": \"string\",\r\n  \"fechaInicio\": \"2024-09-20\",\r\n  \"fechaExpiracion\": \"2024-09-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/membresia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"membresia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarMembresia",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/membresia/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"membresia",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Evento",
+			"item": [
+				{
+					"name": "RegistrarEvento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzE0NDIzMiwiZXhwIjoxNzI3MTgwMjMyfQ.JDsCQisZ5HYNag_dfjho2VmonJPYrtPiFMJy6UHmYyPvkVZl8hI1G3nUO34Z8AT9UjEnYFV_YJW5Qtfn9w3GSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"nombreEvento\": \"Feria de Tecnología\",\r\n  \"tipoEvento\": \"Exposición\",\r\n  \"fechaEvento\": \"2024-09-30\",\r\n  \"precioEvento\": 200.0,\r\n  \"cantInvitados\": 300,\r\n  \"usuario\": {\r\n    \"id_usuario\": 1\r\n  }\r\n  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/evento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"evento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarEvento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzEzNDg1NCwiZXhwIjoxNzI3MTcwODU0fQ.vRsykaGe3wUu746V9BoS0Gusq52VxOexkS07fLcIy_J44SC7D-RcMD1NvTl9fOD6j8QR-BCVd3wtGefirBfIjA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/eventos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"eventos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarEvento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_evento\": 0,\r\n  \"nombreEvento\": \"string\",\r\n  \"tipoEvento\": \"string\",\r\n  \"fechaEvento\": \"2024-09-20\",\r\n  \"precioEvento\": 0,\r\n  \"cantInvitados\": 0,\r\n  \"usuario\": {\r\n    \"id_usuario\": 0,\r\n    \"nombre\": \"string\",\r\n    \"correo\": \"string\",\r\n    \"contrasena\": \"string\",\r\n    \"fechaNacimiento\": \"2024-09-20\",\r\n    \"membresia\": {\r\n      \"id_membresia\": 0,\r\n      \"tipo\": \"string\",\r\n      \"fechaInicio\": \"2024-09-20\",\r\n      \"fechaExpiracion\": \"2024-09-20\"\r\n    },\r\n    \"rol\": {\r\n      \"id_rol\": 0,\r\n      \"tipo\": \"string\"\r\n    }\r\n  },\r\n  \"carritoCompra\": {\r\n    \"id_carrito\": 0,\r\n    \"evento\": {\r\n      \"id_evento\": 0,\r\n      \"nombreEvento\": \"string\",\r\n      \"tipoEvento\": \"string\",\r\n      \"fechaEvento\": \"2024-09-20\",\r\n      \"precioEvento\": 0,\r\n      \"cantInvitados\": 0,\r\n      \"usuario\": {\r\n        \"id_usuario\": 0,\r\n        \"nombre\": \"string\",\r\n        \"correo\": \"string\",\r\n        \"contrasena\": \"string\",\r\n        \"fechaNacimiento\": \"2024-09-20\",\r\n        \"membresia\": {\r\n          \"id_membresia\": 0,\r\n          \"tipo\": \"string\",\r\n          \"fechaInicio\": \"2024-09-20\",\r\n          \"fechaExpiracion\": \"2024-09-20\"\r\n        },\r\n        \"rol\": {\r\n          \"id_rol\": 0,\r\n          \"tipo\": \"string\"\r\n        }\r\n      },\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"pago\": {\r\n      \"id_pago\": 0,\r\n      \"metodoPago\": \"string\",\r\n      \"cantPago\": 0,\r\n      \"fechaPago\": \"2024-09-20\",\r\n      \"carritoCompra\": \"string\"\r\n    },\r\n    \"items\": [\r\n      \"string\"\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planify/evento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"evento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarEvento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA3NTM5NSwiZXhwIjoxNzI3MTExMzk1fQ.aFOpAO5lJ_GtKGpqDqRZH-IuEc-AbwosoJ9I2iYRdXsW_iRslsEV2O2fUJQWkN-sfIN6DSwBYTt948fEJBR6Cw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/evento/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"evento",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerEventoMayorCant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA3NTM5NSwiZXhwIjoxNzI3MTExMzk1fQ.aFOpAO5lJ_GtKGpqDqRZH-IuEc-AbwosoJ9I2iYRdXsW_iRslsEV2O2fUJQWkN-sfIN6DSwBYTt948fEJBR6Cw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/evento/con-mas-invitados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"evento",
+								"con-mas-invitados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TotalVentasPorFecha",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA3NTM5NSwiZXhwIjoxNzI3MTExMzk1fQ.aFOpAO5lJ_GtKGpqDqRZH-IuEc-AbwosoJ9I2iYRdXsW_iRslsEV2O2fUJQWkN-sfIN6DSwBYTt948fEJBR6Cw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/usuario/administrador/ventasporfecha",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"usuario",
+								"administrador",
+								"ventasporfecha"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarEventoPorTipo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA3NTM5NSwiZXhwIjoxNzI3MTExMzk1fQ.aFOpAO5lJ_GtKGpqDqRZH-IuEc-AbwosoJ9I2iYRdXsW_iRslsEV2O2fUJQWkN-sfIN6DSwBYTt948fEJBR6Cw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/evento/BuscarTipo/Concierto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"evento",
+								"BuscarTipo",
+								"Concierto"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CarritoCompra",
+			"item": [
+				{
+					"name": "ListarCarritoCompra",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA3NTM5NSwiZXhwIjoxNzI3MTExMzk1fQ.aFOpAO5lJ_GtKGpqDqRZH-IuEc-AbwosoJ9I2iYRdXsW_iRslsEV2O2fUJQWkN-sfIN6DSwBYTt948fEJBR6Cw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CantidadDeProductoPorEvento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA3NTM5NSwiZXhwIjoxNzI3MTExMzk1fQ.aFOpAO5lJ_GtKGpqDqRZH-IuEc-AbwosoJ9I2iYRdXsW_iRslsEV2O2fUJQWkN-sfIN6DSwBYTt948fEJBR6Cw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/usuario/administrador/obtenercantidad/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"usuario",
+								"administrador",
+								"obtenercantidad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CantidadUsuarioQuePagaronEnUnIntervaloDeTiempo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA3NTM5NSwiZXhwIjoxNzI3MTExMzk1fQ.aFOpAO5lJ_GtKGpqDqRZH-IuEc-AbwosoJ9I2iYRdXsW_iRslsEV2O2fUJQWkN-sfIN6DSwBYTt948fEJBR6Cw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/pago/CantUsuarioIntervaloTiempo/2024-09-03/2024-10-28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"pago",
+								"CantUsuarioIntervaloTiempo",
+								"2024-09-03",
+								"2024-10-28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OrdenarDescendentementePorFechaDePago",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyNzA3NTM5NSwiZXhwIjoxNzI3MTExMzk1fQ.aFOpAO5lJ_GtKGpqDqRZH-IuEc-AbwosoJ9I2iYRdXsW_iRslsEV2O2fUJQWkN-sfIN6DSwBYTt948fEJBR6Cw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planify/carritoCompra/Ordenado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planify",
+								"carritoCompra",
+								"Ordenado"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
